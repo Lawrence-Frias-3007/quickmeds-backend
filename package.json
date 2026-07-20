@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "QuickMeds delivery backend - NestJS + Supabase",
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "scripts": {
     "build": "node ./node_modules/@nestjs/cli/bin/nest.js build",
