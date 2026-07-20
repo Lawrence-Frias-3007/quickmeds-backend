@@ -22,7 +22,17 @@ export class SupabaseService {
   this.client = createClient(
     this.config.get<string>('SUPABASE_URL')!,
     this.config.get<string>('SUPABASE_SERVICE_ROLE_KEY')!,
-    { auth: { persistSession: false } },
+    {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+      realtime: {
+        params: {
+          eventsPerSecond: 0,
+        },
+      },
+    },
   );
 }
 
